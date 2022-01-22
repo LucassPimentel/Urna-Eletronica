@@ -126,7 +126,7 @@
   line-height: 30px;
 }
 
-.num{
+.num {
   display: inline-block;
   width: 30px;
   height: 40px;
@@ -155,4 +155,20 @@
 .aviso--grande {
   font-size: 18pt;
   font-weight: bold;
+}
+
+.linkedin {
+  margin: 0 auto;
+  display: table;
+  font-size: 20pt;
+}
+
+.a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: grey;
 }

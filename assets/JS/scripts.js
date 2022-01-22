@@ -9,7 +9,7 @@ let etapaAtual = 0;
 let numero = "";
 let branco = false;
 let nome = "";
-let etapasHtml = etapas 
+let etapasHtml = etapas;
 
 function comecarEtapa() {
   let etapa = etapas[etapaAtual];
@@ -61,7 +61,7 @@ function atualizaInterface() {
     aviso.style.display = "block";
     descGeral.innerHTML =
       '<div class ="aviso--grande">NENHUM CANDIDATO COM ESTE NÚMERO</div>';
-      let periodoAguardando  = setTimeout(comecarEtapa, 2000)
+    setTimeout(comecarEtapa, 1000);
   }
 }
 
@@ -106,13 +106,11 @@ function Corrige() {
 function Confirma() {
   let etapa = etapas[etapaAtual];
 
-
   let votoConfirmado = false;
 
   if (branco === true) {
     votoConfirmado = true;
     alert("VOTO COMPUTADO COMO BRANCO.");
-    
   } else if (numero.length === etapa.numeros) {
     votoConfirmado = true;
     alert(`VOTO COMPUTADO EM ${numero}`);
@@ -120,7 +118,8 @@ function Confirma() {
   } else {
     alert("[ERRO]");
     comecarEtapa();
-  } comecarEtapa();
+  }
+  comecarEtapa();
 }
 
 // // if(candidatoExis.length <= 0) {
