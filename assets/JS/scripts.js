@@ -105,14 +105,16 @@ function Corrige() {
 
 function Confirma() {
   let etapa = etapas[etapaAtual];
-
+  const somConfirma = new Audio('assets/audio/confirma-som.mp3')
   let votoConfirmado = false;
 
   if (branco === true) {
+    somConfirma.play()
     votoConfirmado = true;
     alert("VOTO COMPUTADO COMO BRANCO.");
   } else if (numero.length === etapa.numeros) {
     votoConfirmado = true;
+    somConfirma.play()
     alert(`VOTO COMPUTADO EM ${numero}`);
     comecarEtapa();
   } else {
